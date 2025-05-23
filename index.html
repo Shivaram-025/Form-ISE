@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="./style.css"/>
 <title>Local Video Background</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
 <!-- <style>
   html, body {
     height: 100%;
@@ -121,7 +124,7 @@
   </video>
 </div>
 
-<div class="content">
+<div id="myVideo" class="content">
   <div>
     <div class="logos">
       <img class="aiems" src="./Aiems_logo-removebg-preview.jpg"/>
@@ -129,11 +132,19 @@
       <img class="ise" src="./ISE-LOGO.jpg"/>
     </div>
     <h2>Forum Day</h2>
-    <h3>Department of ISE<br>TECH TITANS</h3>
+    <h3>Department of ISE<br><span>TECH TITANS</span></h3>
     <!-- <p>Amruta Institute of Engineering and Management Science, Bengaluru</p> -->
-    <h4>Friday | 23-05-2025 | 9:30AM<br>Venue: AIEMS Auditorium<br>BIDADI</h4>
+    <h4 class="last">Friday | 23-05-2025 | 9:30AM<br>Venue: AIEMS Auditorium<br>BIDADI</h4>
   </div>
 </div>
 
 </body>
+
+<script>
+  const video = document.getElementById('myVideo');
+  video.addEventListener('ended', () => {
+    video.currentTime = 0;
+    video.play();
+  });
+</script>
 </html>

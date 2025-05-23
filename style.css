@@ -106,3 +106,19 @@ p {
     transition: transform 0.3s ease;
     cursor: pointer;
 }
+
+span {
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-size: 60px;
+}
+
+.last {
+    font-family: "Orbitron", cursive;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-size: 40px;
+}
